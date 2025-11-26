@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.user.imessage-claude-monitor</string>
+    
+    <key>ProgramArguments</key>
+    <array>
+        <string>/usr/local/bin/python3</string>
+        <string>/Users/YOUR_USERNAME/imessage_claude_monitor.py</string>
+        <string>--prefix</string>
+        <string>!claude</string>
+        <string>--interval</string>
+        <string>2</string>
+    </array>
+    
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>ANTHROPIC_API_KEY</key>
+        <string>YOUR_API_KEY_HERE</string>
+    </dict>
+    
+    <key>RunAtLoad</key>
+    <true/>
+    
+    <key>KeepAlive</key>
+    <true/>
+    
+    <key>StandardOutPath</key>
+    <string>/Users/YOUR_USERNAME/Library/Logs/imessage-claude-monitor.log</string>
+    
+    <key>StandardErrorPath</key>
+    <string>/Users/YOUR_USERNAME/Library/Logs/imessage-claude-monitor-error.log</string>
+    
+    <key>WorkingDirectory</key>
+    <string>/Users/YOUR_USERNAME</string>
+</dict>
+</plist>
